@@ -1,0 +1,10 @@
+# Ignore private / local folders
+ignore/
+.vscode/
+
+# System files
+.DS_Store
+
+# Env & dependencies
+.env
+node_modules/

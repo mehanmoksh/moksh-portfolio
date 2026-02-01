@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce Portal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
+    <!-- whole website will contain different sections for different elements - whole structured website -->
+
+    <!-- HEADER -->
+    <header>
+      <!-- TOP HEADER WITH CONTACT INFORMATION DETAILS  -->
+      <div class="contact-header">
+        <div class="container contact-section-in-header">
+          <span class="contactInfo-in-header"><a class="text-decoration-none contactInfo-in-header" href="tel:+918013400050">+91 80134-00050</a></span>
+          <span class="contactInfo-in-header"><a class="text-decoration-none contactInfo-in-header" href="mailTo:itzmemoksh2002@gmail.com">itzmemoksh2002@gmail.com</a></span>
+        </div>
+      </div>
+
+      <!-- NAVIGATION HEADER  -->
+      <div class="container">
+        <nav class="header-nav navbar navbar-expand-lg">
+          <!-- right side logo -->
+          <div class="header-logo">
+            <!-- <img src="/assets/images/logo.png" alt="Logo" alt="Logo"> -->
+            <span class="header-logo-text"> Moksh Mehan </span>
+          </div>
+
+          <!-- hamburger icon -->
+          <!-- <button class="hambuger d-lg-none" id="hamburgerBtn">
+            <span></span><span></span><span></span>
+          </button> -->
+
+          <div
+            class="bar-container d-lg-none"
+            id="barContainerId"
+            onclick="myFunction(this)"
+          >
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+
+          <!-- left side navigation menu with links hiden on mobile -->
+          <!-- each active item will be shown up seperately in a bold & effective manner  -->
+          <div
+            class="collapse navbar-collapse d-none d-lg-flex justify-content-end"
+          >
+            <ul id="header-nav-ul">
+              <li class="header-nav-items">
+                <a
+                  href="/#experience-section"
+                  class="text-decoration-none text-dark"
+                  >Experience</a
+                >
+              </li>
+              <li class="header-nav-items">
+                <a
+                  href="/#skills-section"
+                  class="text-decoration-none text-dark"
+                  >Skills</a
+                >
+              </li>
+              <li class="header-nav-items">
+                <a
+                  href="/#projects-section"
+                  class="text-decoration-none text-dark"
+                  >Projects</a
+                >
+              </li>
+              <a href="/#resume-section" class="text-decoration-none text-black"
+                ><li class="header-nav-items">Resume</li></a
+              >
+              <li class="header-nav-items">
+                <a href="/#about-section" class="text-decoration-none text-dark"
+                  >About Me</a
+                >
+              </li>
+              <a
+                href="/#contact-section"
+                class="text-decoration-none text-black"
+                ><li class="header-nav-items">Contact Me</li></a
+              >
+              <!-- <li class="header-nav-item"><i class="fa-solid fa-cart-shopping"></i></li> -->
+            </ul>
+          </div>
+
+          <!-- side drawer, coming from right side -->
+          <div class="side-drawer" id="sideDrawer">
+            <button class="close-btn" id="closeDrawer">&times;</button>
+            <ul id="mobile-header-nav-ul">
+              <li class="header-nav-items">
+                <a
+                  href="/#experience-section"
+                  class="text-decoration-none text-dark"
+                  >Experience</a
+                >
+              </li>
+              <li class="header-nav-items">
+                <a
+                  href="/#skills-section"
+                  class="text-decoration-none text-dark"
+                  >Skills</a
+                >
+              </li>
+              <li class="header-nav-items">
+                <a
+                  href="/#projects-section"
+                  class="text-decoration-none text-dark"
+                  >Projects</a
+                >
+              </li>
+              <a href="/#resume-section" class="text-decoration-none text-black"
+                ><li class="header-nav-items">Resume</li></a
+              >
+              <li class="header-nav-items">
+                <a href="/#about-section" class="text-decoration-none text-dark"
+                  >About Me</a
+                >
+              </li>
+              <a
+                href="/#contact-section"
+                class="text-decoration-none text-black"
+                ><li class="header-nav-items">Contact Me</li></a
+              >
+              <!-- <li class="header-nav-item"><i class="fa-solid fa-cart-shopping"></i></li> -->
+            </ul>
+          </div>
+
+          <!-- overlay -->
+          <div class="overlay" id="overlay"></div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO Section - three different slider  -->
+
+    <section class="hero-slider" id="heroSlider">
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <div class="slide-content left">
+          <h4>Frontend Techstack</h4>
+          <h2>Crafting Engaging User Interfaces</h2>
+          <p>
+            I specialize in building modern, responsive, and visually engaging
+            interfaces using HTML, CSS, JavaScript, React, Angular, and Tailwind. Every
+            project I create focuses on usability and design aesthetics.
+          </p>
+
+          <!-- contact and projects -->
+          <div class="hero-cta mt-4">
+            <a href="#contact" class="btn btn-success me-2">
+              <i class="bi bi-envelope-fill me-1"></i> Contact Me
+            </a>
+            <a href="#projects-section" class="btn btn-outline-dark">
+              <i class="bi bi-code-slash me-1"></i> View Projects
+            </a>
+          </div>
+
+        </div>
+        <div class="slide-image right">
+          <img src="/assets/images/Moksh_9.png" alt="Frontend Developer" />
+        </div>
+      </div>
+
+      <!-- slide - 2 -->
+      <div class="slide">
+        <div class="slide-image right">
+          <img src="/assets/images/Moksh_8.png" alt="Frontend Developer" />
+        </div>
+
+        <div class="slide-content right">
+          <h4>Backend Techstack</h4>
+          <h2>Building Powerful Server Logic</h2>
+          <p>
+            I work with PHP, Laravel, Django, Node.js, and REST APIs to create scalable,
+            secure, and efficient backends. My focus is on clean architecture
+            and performance optimization.
+          </p>
+
+           <!-- view work experience and downlaod resume -->
+          <div class="hero-cta mt-4">
+            <a href="#experience-section" class="btn btn-success me-2">
+              <i class="bi bi-briefcase-fill me-1"></i> View My Work
+            </a>
+
+            <a href="#resume-section" class="btn btn-primary">
+              <i class="bi bi-download me-1"></i> Download My Resume
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- slide -->
+      <div class="slide">
+        <div class="slide-content left">
+          <h4>Fullstack Work</h4>
+          <h2>End-to-End Product Development</h2>
+          <p>
+            I develop scalable APIs and modern UIs using Laravel, Django, React, Angular, and Tailwind—supported by strong version control practices and smooth deployment workflows.
+          </p>
+
+          <div class="hero-cta mt-4">
+            <a href="#skills-section" 
+                class="btn"
+                style="background-color: #ff4c60; color: #fff; border: none;">
+                <i class="bi bi-lightning-charge-fill me-1"></i> View My Skillsets
+              </a>
+
+              <a href="https://www.linkedin.com/in/moksh-mehan-7280381b3/" 
+                target="_blank" 
+                class="btn btn-primary ms-2">
+                <i class="bi bi-linkedin me-1"></i> Connect on LinkedIn
+              </a>
+          </div>
+        </div>
+        <div class="slide-image right">
+          <img src="/assets/images/Moksh_2.png" alt="Fullstack Developer" />
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="slide">
+        <div class="slide-image left">
+          <img src="/assets/images/Moksh_9.png" alt="Database Expertise" />
+        </div>
+        <div class="slide-content right">
+          <h4>Database Expertise</h4>
+          <h2>Structured & Optimized Data Handling</h2>
+          <p>
+            With experience in MySQL, PostgreSQL, and MongoDB, I ensure fast,
+            reliable, and secure data operations through optimized queries and
+            schema design.
+          </p>
+
+          <div class="coding-cta">
+            <a href="#coding-profiles" 
+              class="btn"
+              style="background-color:#6c63ff; color:#fff; border:none;">
+              <i class="bi bi-code-slash me-1"></i> Check My Problem-Solving Skills
+            </a>
+            <p class="mt-1 mb-0 text-muted small">600+ problems solved on LeetCode</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Dots container -->
+      <div class="slider-dots" id="sliderDots"></div>
+    </section>
+
+        <!-- about section -->
+    <section id="about-section" class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- Left: Photo -->
+          <div class="col-md-5 text-center">
+            <img
+              src="/assets/images/Moksh_2.png"
+              alt="Moksh Mehan"
+              class="rounded-4 shadow-sm img-fluid about-img"
+            />
+          </div>
+
+          <!-- Right: About Content -->
+          <div class="col-md-7">
+            <h2 class="fw-bold mb-3">About Me</h2>
+            <p class="text-muted mb-4">
+              I’m <strong>Moksh Mehan</strong>, a passionate
+              <strong>Full Stack Developer</strong> who loves transforming ideas
+              into clean, interactive, and scalable web experiences. With strong
+              expertise in <strong>Angular</strong>, <strong>Node.js</strong>,
+              <strong>Laravel</strong>, and <strong>React.js</strong>, I bridge
+              the gap between frontend aesthetics and backend performance to
+              deliver efficient digital products.
+            </p>
+
+            <p class="text-muted mb-4">
+              I earned my
+              <strong>Bachelor of Engineering in Computer Science</strong> from
+              <strong>Chandigarh University</strong> with a
+              <strong>CGPA of 7.64</strong>. Prior to that, I secured
+              <strong>87%</strong> in 10+2 (CBSE) and <strong>89.53%</strong> in
+              10th (PSEB). During my college years, I was actively involved in
+              <strong
+                >tech communities, event hosting, and leadership
+                programs</strong
+              >, which helped me build both technical and managerial confidence.
+            </p>
+
+            <p class="text-muted mb-4">
+              I have also been a proud
+              <strong>two-time Hackathon winner</strong> at Chandigarh
+              University — where I led teams in building innovative solutions
+              that merged creativity with technology.
+              <a href="#hackathons" class="btn btn-outline-primary btn-sm ms-1">
+                <i class="bi bi-trophy me-1"></i> View My Hackathons
+              </a>
+            </p>
+
+            <!-- Quick Facts -->
+            <div class="row g-3 mb-4">
+              <div class="col-sm-6">
+                <div class="p-3 bg-light rounded-3 shadow-sm">
+                  <h6 class="fw-bold mb-1 text-primary">Current Role</h6>
+                  <p class="mb-0 text-muted">
+                    Associate Software Engineer at Trantor
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 bg-light rounded-3 shadow-sm">
+                  <h6 class="fw-bold mb-1 text-primary">Experience</h6>
+                  <p class="mb-0 text-muted">
+                    <span id="experience"></span> in Full Stack Development
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tech Stack Highlights -->
+            <h5 class="fw-bold mt-4 mb-3">Tech Stack Highlights</h5>
+            <div class="tech-stack d-flex flex-wrap gap-3 mb-4">
+              <span class="badge bg-danger text-white">Angular</span>
+              <span class="badge bg-dark text-white">Node.js</span>
+              <span class="badge bg-primary">Laravel</span>
+              <span class="badge bg-warning text-dark">React.js</span>
+              <span class="badge bg-success">MySQL</span>
+              <span class="badge bg-info text-dark">Tailwind</span>
+              <span class="badge bg-dark">Git / GitHub</span>
+              <span class="badge bg-secondary">WordPress</span>
+            </div>
+
+            <!-- Call to Action -->
+            <div
+              class="about-cta d-flex flex-wrap align-items-center gap-3 mt-4"
+            >
+              <a href="#contact" class="btn btn-success">
+                <i class="bi bi-envelope-fill me-1"></i> Contact Me
+              </a>
+              <a href="#projects-section" class="btn btn-outline-dark">
+                <i class="bi bi-code-slash me-1"></i> View My Work
+              </a>
+              <a
+                href="https://www.linkedin.com/in/moksh-mehan-7280381b3/"
+                target="_blank"
+                class="btn btn-linkedin btn-primary"
+              >
+                <i class="bi bi-linkedin me-1"></i> Connect on LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- experience section -->
+    <section
+      id="experience-section"
+      class="py-5"
+      style="background: linear-gradient(120deg, #f9fbff, #eef3ff)"
+    >
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold text-uppercase mb-2">Professional Journey</h2>
+          <!-- auto updating experience with js  -->
+         <p class="text-muted mb-1">
+            Total Experience: <strong><span id="experience"></span></strong>
+          </p>
+
+          <p class="fst-italic text-secondary">
+            A roadmap of my growth through code, collaboration, and creativity
+            🚀
+          </p>
+        </div>
+
+        <div class="timeline position-relative">
+          <!-- timeline -->
+          <!-- <div class="timeline-line"></div> -->
+          <!-- Current Role -->
+          <div class="timeline-item right">
+            <div class="timeline-content bg-white p-4 rounded-4 shadow-sm">
+              <h5 class="fw-bold text-primary">
+                Trantor — Associate Software Engineer
+              </h5>
+              <p class="text-muted mb-1">May 2025 – Present</p>
+              <ul class="mb-3">
+                <li>
+                  Led a full-cycle WordPress project — developed custom themes
+                  and plugins optimized for SEO & performance.
+                </li>
+                <li>
+                  Built scalable modules and REST APIs in Laravel with MySQL,
+                  integrating React.js for dynamic frontends.
+                </li>
+                <li>
+                  Delivered responsive UI with HTML, CSS, Tailwind & JS ensuring
+                  perfect cross-device compatibility.
+                </li>
+                <li>
+                  Worked on Node.js and Angular-based internal tools improving
+                  data flow and project management efficiency.
+                </li>
+              </ul>
+              <div class="mt-3">
+                <span class="badge bg-primary me-2">Laravel</span>
+                <span class="badge bg-warning text-dark me-2">React.js</span>
+                <span class="badge bg-success me-2">WordPress</span>
+                <span class="badge bg-info text-dark me-2">Angular</span>
+                <span class="badge bg-dark me-2">Node.js</span>
+              </div>
+              <div class="mt-3">
+                <span class="badge bg-light text-dark border">Leadership</span>
+                <span class="badge bg-light text-dark border"
+                  >Client Communication</span
+                >
+                <span class="badge bg-light text-dark border"
+                  >Problem Solving</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Previous Role -->
+          <div class="timeline-item left">
+            <div class="timeline-content bg-white p-4 rounded-4 shadow-sm">
+              <h5 class="fw-bold text-primary">Trantor — Trainee</h5>
+              <p class="text-muted mb-1">Sep 2024 – Apr 2025</p>
+              <ul class="mb-3">
+                <li>
+                  Developed Django-based backend APIs with role-based access and
+                  data handling.
+                </li>
+                <li>
+                  Built a Laravel application with REST APIs, authentication,
+                  and admin dashboards from scratch.
+                </li>
+                <li>
+                  Strengthened understanding of MVC, routing, and modular
+                  backend logic.
+                </li>
+                <li>
+                  Actively collaborated with team members and improved
+                  communication & project reporting skills.
+                </li>
+              </ul>
+              <div class="mt-3">
+                <span class="badge bg-primary me-2">Laravel</span>
+                <span class="badge bg-secondary me-2">Django</span>
+                <span class="badge bg-success me-2">MySQL</span>
+                <span class="badge bg-info text-dark me-2">REST APIs</span>
+                <span class="badge bg-dark me-2">Git</span>
+              </div>
+              <div class="mt-3">
+                <span class="badge bg-light text-dark border">Teamwork</span>
+                <span class="badge bg-light text-dark border"
+                  >Adaptability</span
+                >
+                <span class="badge bg-light text-dark border"
+                  >Continuous Learning</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- skills listings -->
+    <section id="skills-section" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-5 text-uppercase">
+          Technical Skills
+        </h2>
+        <div class="row g-4">
+          <!-- Programming Languages -->
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="skill-card p-4 text-white rounded-4 shadow-sm h-100"
+              style="background: linear-gradient(135deg, #ff7a18, #af002d 70%)"
+            >
+              <h5 class="fw-bold mb-3 text-uppercase border-bottom pb-2">
+                <i class="bi bi-code-slash me-2"></i>Programming Languages
+              </h5>
+              <ul class="list-unstyled mb-0">
+                <li>JavaScript</li>
+                <li>PHP</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C++ / C</li>
+                <li>SQL</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Frontend Development -->
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="skill-card p-4 text-white rounded-4 shadow-sm h-100"
+              style="background: linear-gradient(135deg, #0093e9, #80d0c7 70%)"
+            >
+              <h5 class="fw-bold mb-3 text-uppercase border-bottom pb-2">
+                <i class="bi bi-window-sidebar me-2"></i>Frontend
+              </h5>
+              <ul class="list-unstyled mb-0">
+                <li>HTML5 / CSS3</li>
+                <li>Bootstrap / Tailwind</li>
+                <li>JavaScript (ES6+)</li>
+                <li>Angular</li>
+                <li>React.js</li>
+                <li>Responsive Design</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Backend Development -->
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="skill-card p-4 text-white rounded-4 shadow-sm h-100"
+              style="background: linear-gradient(135deg, #4facfe, #00f2fe 70%)"
+            >
+              <h5 class="fw-bold mb-3 text-uppercase border-bottom pb-2">
+                <i class="bi bi-server me-2"></i>Backend
+              </h5>
+              <ul class="list-unstyled mb-0">
+                <li>PHP / Laravel</li>
+                <li>Python / Django</li>
+                <li>Wordpress Plugin Dev</li>
+                <li>Node.js / Express.js</li>
+                <li>RESTful APIs</li>
+                <li>Authentication & Middleware</li>
+                <li>MySQL / SQLite</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tools & Platforms -->
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="skill-card p-4 text-white rounded-4 shadow-sm h-100"
+              style="background: linear-gradient(135deg, #8360c3, #2ebf91 70%)"
+            >
+              <h5 class="fw-bold mb-3 text-uppercase border-bottom pb-2">
+                <i class="bi bi-tools me-2"></i>Tools & Platforms
+              </h5>
+              <ul class="list-unstyled mb-0">
+                <li>Git / GitHub</li>
+                <li>VS Code / PhpStorm</li>
+                <li>Postman / Thunder Client</li>
+                <li>WordPress / WooCommerce</li>
+                <li>Deployment & Hosting</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- soft skills section -->
+    <section
+      id="soft-skills"
+      class="py-5"
+      style="background: linear-gradient(120deg, #f0f4ff, #faf9ff)"
+    >
+      <div class="container text-center">
+        <h2 class="fw-bold text-uppercase mb-4">Professional Strengths</h2>
+        <p class="text-muted mb-5">
+          Beyond technical proficiency, here’s what defines my approach to
+          teamwork and leadership.
+        </p>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Communication -->
+          <div class="col-md-4">
+            <div class="p-4 rounded-4 shadow-sm bg-white h-100 skill-soft-card">
+              <i class="bi bi-chat-dots fs-1 text-primary mb-3"></i>
+              <h5 class="fw-bold mb-2">Effective Communication</h5>
+              <p class="text-muted mb-0">
+                Clear and confident communicator with experience in client
+                interaction and presentation.
+              </p>
+            </div>
+          </div>
+
+          <!-- Leadership -->
+          <div class="col-md-4">
+            <div class="p-4 rounded-4 shadow-sm bg-white h-100 skill-soft-card">
+              <i class="bi bi-people fs-1 text-success mb-3"></i>
+              <h5 class="fw-bold mb-2">Leadership & Mentorship</h5>
+              <p class="text-muted mb-0">
+                Ability to guide projects, mentor peers, and take ownership with
+                accountability.
+              </p>
+            </div>
+          </div>
+
+          <!-- Problem Solving -->
+          <div class="col-md-4">
+            <div class="p-4 rounded-4 shadow-sm bg-white h-100 skill-soft-card">
+              <i class="bi bi-lightbulb fs-1 text-warning mb-3"></i>
+              <h5 class="fw-bold mb-2">Analytical Problem Solving</h5>
+              <p class="text-muted mb-0">
+                Strategic thinker with strong troubleshooting and
+                decision-making skills.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- projects section -->
+<section id="projects-section" class="py-5 bg-light">
+  <div class="container container-lg">
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Personal Projects</h2>
+      <p class="text-muted mx-auto" style="max-width: 600px">
+        Exploring ideas, building solutions, and constantly learning beyond my
+        professional work.
+      </p>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="row g-4 justify-content-center">
+      <!-- PG Life -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100 text-center">
+          <div class="project-icon mb-3">
+            <i class="bi bi-building"></i>
+          </div>
+          <h5 class="fw-bold mb-2">PG Life – Accommodation Platform</h5>
+          <p class="text-muted small">
+            A web platform helping students and professionals find nearby PGs.
+          </p>
+          <div class="tech-badges mt-3">
+            <span class="badge">PHP</span>
+            <span class="badge">React</span>
+            <span class="badge">MySQL</span>
+            <span class="badge">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SignSense -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100 text-center">
+          <div class="project-icon mb-3">
+            <i class="bi bi-hand-index-thumb"></i>
+          </div>
+          <h5 class="fw-bold mb-2">
+            SignSense – AI Sign Language Detection
+          </h5>
+          <p class="text-muted small">
+            Sign language detection system bridging communication gaps.
+          </p>
+          <div class="tech-badges mt-3">
+            <span class="badge">Python</span>
+            <span class="badge">TensorFlow</span>
+            <span class="badge">ML</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EarlyFlood -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100 text-center">
+          <div class="project-icon mb-3">
+            <i class="bi bi-cloud-rain-heavy"></i>
+          </div>
+          <h5 class="fw-bold mb-2">
+            EarlyFlood – IoT-Based Flood Detection
+          </h5>
+          <p class="text-muted small">
+            Flood early-warning system with real-time alerts.
+          </p>
+          <div class="tech-badges mt-3">
+            <span class="badge">C++</span>
+            <span class="badge">IoT</span>
+            <span class="badge">Embedded</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EduVerse -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100 text-center">
+          <div class="project-icon mb-3">
+            <i class="bi bi-mortarboard"></i>
+          </div>
+          <h5 class="fw-bold mb-2">
+            EduVerse – Learning Management System
+          </h5>
+          <p class="text-muted small">
+            LMS with real-time class updates and assignments.
+          </p>
+          <div class="tech-badges mt-3">
+            <span class="badge">Laravel</span>
+            <span class="badge">React</span>
+            <span class="badge">MySQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CodeMate -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100 text-center">
+          <div class="project-icon mb-3">
+            <i class="bi bi-code-slash"></i>
+          </div>
+          <h5 class="fw-bold mb-2">
+            CodeMate – Collaborative Code Editor
+          </h5>
+          <p class="text-muted small">
+            Real-time collaborative editor with live typing support.
+          </p>
+          <div class="tech-badges mt-3">
+            <span class="badge">Node.js</span>
+            <span class="badge">Socket.io</span>
+            <span class="badge">Ace Editor</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FitTrack -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100 text-center">
+          <div class="project-icon mb-3">
+            <i class="bi bi-heart-pulse"></i>
+          </div>
+          <h5 class="fw-bold mb-2">FitTrack – Fitness Web App</h5>
+          <p class="text-muted small">
+            Fitness tracking app to monitor workouts and health goals.
+          </p>
+          <div class="tech-badges mt-3">
+            <span class="badge">React</span>
+            <span class="badge">Node.js</span>
+            <span class="badge">MongoDB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="text-center mt-5">
+      <img
+        src="/assets/images/Moksh_Mehan.jpeg"
+        alt="Moksh Mehan"
+        class="rounded-circle mb-3"
+        width="90"
+        height="90"
+      />
+      <p class="text-muted mb-2">
+        I’m active on LinkedIn and GitHub, sharing my work and learning journey.
+      </p>
+      <a
+        href="https://www.linkedin.com/in/moksh-mehan-7280381b3/"
+        target="_blank"
+        class="btn btn-primary btn-sm me-2"
+      >
+        <i class="bi bi-linkedin me-1"></i> LinkedIn
+      </a>
+      <a
+        href="https://github.com/mehanmoksh/"
+        target="_blank"
+        class="btn btn-dark btn-sm"
+      >
+        <i class="bi bi-github me-1"></i> GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+
+    <!-- coding profile section -->
+    <section id="coding-profiles" class="py-5 coding-section">
+      <div class="container">
+        <h2 class="fw-bold text-center mb-5">
+          Coding Profiles & DSA Journey 💡
+        </h2>
+
+        <div class="row align-items-center">
+          <!-- Left: Description -->
+          <div class="col-md-6 mb-4 mb-md-0">
+            <h4 class="fw-bold text-primary">
+              Problem Solving with C++ & Java
+            </h4>
+            <p class="text-muted">
+              I’m deeply passionate about improving my problem-solving skills
+              through daily practice in
+              <strong>Data Structures & Algorithms (DSA)</strong>. With a strong
+              foundation in <strong>C++</strong> and <strong>Java</strong>, I
+              love tackling complex logical challenges and optimizing code for
+              real-world efficiency.
+            </p>
+
+            <p class="text-muted">
+              I’ve actively solved problems across multiple platforms,
+              consistently sharpening my logical thinking and analytical ability
+              — which I apply in both my professional and personal projects.
+            </p>
+
+            <div class="mt-3">
+              <span class="badge bg-dark me-2">C++</span>
+              <span class="badge bg-warning text-dark me-2">Java</span>
+              <span class="badge bg-info text-dark me-2">DSA</span>
+              <span class="badge bg-success">Competitive Programming</span>
+            </div>
+          </div>
+
+          <!-- Right: Profiles -->
+          <div class="col-md-6">
+            <div class="profile-card p-4 rounded-4 shadow-sm mb-3">
+              <div class="d-flex align-items-center justify-content-between">
+                <div>
+                  <h5 class="fw-bold mb-1">
+                    <i class="bi bi-code-square text-warning me-2"></i>LeetCode
+                  </h5>
+                  <p class="text-muted mb-1">
+                    Solved
+                    <strong
+                      ><span class="count" data-target="600">0</span>+</strong
+                    >
+                    problems
+                  </p>
+                  <p class="text-muted small mb-0">
+                    Profile:
+                    <a
+                      href="https://leetcode.com/u/Mr_Moksh_Mehan/"
+                      target="_blank"
+                      class="text-decoration-none text-primary fw-semibold"
+                      >leetcode.com/Mr_Moksh_Mehan</a
+                    >
+                  </p>
+                </div>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                  alt="LeetCode"
+                  width="50"
+                />
+              </div>
+            </div>
+
+            <div class="profile-card p-4 rounded-4 shadow-sm">
+              <div class="d-flex align-items-center justify-content-between">
+                <div>
+                  <h5 class="fw-bold mb-1">
+                    <i class="bi bi-terminal text-success me-2"></i
+                    >GeeksforGeeks
+                  </h5>
+                  <!-- GFG -->
+                  <p class="text-muted mb-1">
+                    Solved
+                    <strong
+                      ><span class="count" data-target="400">0</span>+</strong
+                    >
+                    problems
+                  </p>
+                  <p class="text-muted small mb-0">
+                    Profile:
+                    <a
+                      href="https://www.geeksforgeeks.org/user/itzmemoksh2002/"
+                      target="_blank"
+                      class="text-decoration-none text-primary fw-semibold"
+                      >geeksforgeeks.org/itzmemoksh2002</a
+                    >
+                  </p>
+                </div>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg"
+                  alt="GFG"
+                  width="65"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--hackathon section-->
+    <section id="hackathons" class="py-5 hackathon-section">
+      <div class="container">
+        <h2 class="fw-bold text-center mb-5">Hackathon Highlights 🚀</h2>
+
+        <!-- First Hackathon -->
+        <div class="hackathon-card mb-5 p-4 rounded-4 shadow-sm">
+          <h4 class="fw-bold mb-2 text-primary">
+            SignSense – AI Sign Language Detection
+          </h4>
+          <p class="text-muted mb-3">
+            <strong>Participation, Lead, and Winner</strong> in a
+            university-wide hackathon by developing <strong>SignSense</strong> —
+            an AI-powered system that bridges communication for the deaf and
+            mute. Built within <strong>48 hours</strong> using
+            <strong>Python, TensorFlow, and Machine Learning</strong> to
+            interpret sign language gestures in real-time.
+          </p>
+          <p class="text-muted mb-3">
+            This project was a proud moment as I represented my
+            <strong>Computer Science Department</strong>
+            and led my team in an inter-university hackathon focused on solving
+            real-world social challenges.
+          </p>
+
+          <div class="mt-3 mb-3">
+            <span class="badge bg-success me-2">Python</span>
+            <span class="badge bg-primary me-2">TensorFlow</span>
+            <span class="badge bg-dark me-2">Machine Learning</span>
+            <span class="badge bg-info text-dark">AI Project</span>
+          </div>
+
+          <a
+            href="https://github.com/mehanmoksh/Sign-Language-Detection-System"
+            target="_blank"
+            class="btn btn-outline-dark"
+          >
+            <i class="bi bi-github me-1"></i> Glimpse on GitHub
+          </a>
+        </div>
+
+        <!-- Second Hackathon -->
+        <div class="hackathon-card p-4 rounded-4 shadow-sm">
+          <h4 class="fw-bold mb-2 text-primary">
+            EarlyFlood – IoT-Based Flood Detection System
+          </h4>
+          <p class="text-muted mb-3">
+            <strong>Final Year Hackathon Project</strong> addressing the
+            real-life problem of <strong>flood-prone remote areas</strong>.
+            Built an IoT-based early warning system using
+            <strong>C++ and embedded technologies</strong> for real-time
+            monitoring and mobile alert notifications.
+          </p>
+          <p class="text-muted mb-3">
+            We personally visited flood-affected regions to understand local
+            challenges, ensuring a
+            <strong>cost-effective and practical solution</strong> for small
+            towns and tier-3 regions.
+          </p>
+
+          <div class="mt-3 mb-3">
+            <span class="badge bg-danger me-2">IoT</span>
+            <span class="badge bg-dark me-2">C++</span>
+            <span class="badge bg-primary me-2">Embedded Systems</span>
+            <span class="badge bg-warning text-dark">Hardware + Software</span>
+          </div>
+
+          <!-- <a
+            href="https://github.com/mehanmoksh/"
+            target="_blank"
+            class="btn btn-outline-dark"
+          >
+            <i class="bi bi-github me-1"></i> Glimpse on GitHub
+          </a> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Our story - a little bit brief -->
+     <!-- Extra-Curricular / Leadership Section -->
+    <section id="leadership-section" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Leadership & Extra-Curricular Experience</h2>
+          <p class="text-muted">Beyond academics, these experiences shaped who I am today.</p>
+        </div>
+
+        <div class="row g-4">
+
+          <!-- Card 1: Events & Hosting -->
+          <div class="col-md-6">
+            <div class="p-4 bg-white rounded-4 shadow-sm h-100 leadership-card">
+              <div class="d-flex align-items-start">
+                <div class="icon-circle bg-primary text-white me-3">
+                  <i class="bi bi-mic-fill"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-2">Leading & Hosting Tech Events</h5>
+                  <p class="text-muted">
+                    During my years at <strong>Chandigarh University</strong>, I actively participated 
+                    in and led multiple college events. I hosted and coordinated several 
+                    large-scale coding competitions and tech fests — including the 
+                    <strong>Alexa Developers Group Conference</strong>.  
+                    These experiences sharpened my communication, leadership, and teamwork skills.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: JOTY Startup -->
+          <div class="col-md-6">
+            <div class="p-4 bg-white rounded-4 shadow-sm h-100 leadership-card">
+              <div class="d-flex align-items-start">
+                <div class="icon-circle bg-success text-white me-3">
+                  <i class="bi bi-lightbulb-fill"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-2">Co-Founder of “JOTY” Startup</h5>
+                  <p class="text-muted">
+                    I co-founded <strong>JOTY</strong>, a student-focused platform designed to help 
+                    teachers and students collaborate better by centralizing updates, placements, 
+                    and campus information.  
+                    Inspired by the Punjabi/Hindi pronunciation meaning “togetherness,” JOTY 
+                    helped me grow as a decision-maker and problem solver while leading 
+                    its marketing and outreach initiatives.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- resume download section -->
+    <section id="resume-section" class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Right Column -->
+          <div class="col-lg-6 text-center">
+            <img
+              src="assets/images/Moksh_Mehan.jpeg"
+              alt="My Picture"
+              class="img-fluid rounded-circle mb-3 shadow-sm"
+              style="width: 220px; height: 220px; object-fit: cover"
+            />
+            <h4 class="fw-bold mt-2">Moksh Mehan</h4>
+            <p class="text-muted">
+              Associate Software Developer <br />
+              at Trantor Software Pvt. Ltd.
+            </p>
+          </div>
+
+          <!-- Left Column -->
+          <div class="col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
+            <h6 class="text-primary mb-3">Thanks for showing your interest</h6>
+            <h2 class="fw-bold mb-3">Download my Resume</h2>
+            <p class="text-muted mb-4">
+              Here’s a quick overview of my skills, experience, and projects
+              I’ve worked on. Feel free to explore and get in touch!
+            </p>
+
+            <!-- <a
+              href="assets/files/Moksh_Mehan_resume.pdf"
+              download
+              class="btn btn-primary px-4 py-2"
+            >
+              <i class="bi bi-download me-2"></i>Download Resume
+            </a> -->
+
+            <!-- spin download button -->
+            <button id="downloadBtn" class="btn btn-primary px-4 py-2">
+              <i class="bi bi-download me-2"></i>
+              <span>Download Resume</span>
+            </button>
+            <p class="text-muted mt-2" style="font-size: 0.9rem;">
+              Last updated on: <strong>October 2025</strong>
+            </p>
+
+            <div class="mt-5 text-center text-lg-start">
+              <p class="fw-semibold mb-2">You can also reach out to me at:</p>
+              <div
+                class="d-inline-flex flex-wrap gap-3 text-center text-lg-start"
+              >
+                <a
+                  href="https://github.com/mehanmoksh/"
+                  target="_blank"
+                  class="text-dark text-decoration-none d-flex align-items-center"
+                >
+                  <i class="bi bi-github me-2 fs-5"></i>GitHub
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/moksh-mehan-7280381b3/"
+                  target="_blank"
+                  class="text-dark text-decoration-none d-flex align-items-center"
+                >
+                  <i class="bi bi-linkedin text-primary me-2 fs-5"></i>LinkedIn
+                </a>
+                <a
+                  href="mailto:itzmemoksh2002@gmail.com"
+                  class="text-dark text-decoration-none d-flex align-items-center"
+                >
+                  <i class="bi bi-envelope-fill text-danger me-2 fs-5"></i>Email
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Hobbies & Interests - Liquid Glass Premium -->
+    <section id="hobbies-section" class="py-5 glass-bg">
+      <div class="container">
+        <h2 class="fw-bold text-center mb-4">Hobbies & Interests</h2>
+        <p class="text-muted text-center mb-5">
+          A blend of creativity, exploration, and curiosity that helps me stay inspired and grounded.
+        </p>
+
+        <div class="row g-4 justify-content-center">
+
+          <!-- Hobby Card -->
+          <div class="col-6 col-md-3">
+            <div class="glass-card text-center p-4">
+              <div class="icon-wrap mb-3">
+                <i class="bi bi-globe-americas"></i>
+              </div>
+              <h6 class="fw-bold">Travel</h6>
+              <p class="text-muted small mb-0">
+                Exploring hill stations & peaceful nature escapes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Hobby Card -->
+          <div class="col-6 col-md-3">
+            <div class="glass-card text-center p-4">
+              <div class="icon-wrap mb-3">
+                <i class="bi bi-camera"></i>
+              </div>
+              <h6 class="fw-bold">Photography</h6>
+              <p class="text-muted small mb-0">
+                Capturing landscapes & candid moments.
+              </p>
+            </div>
+          </div>
+
+          <!-- Hobby Card -->
+          <div class="col-6 col-md-3">
+            <div class="glass-card text-center p-4">
+              <div class="icon-wrap mb-3">
+                <i class="bi bi-book-half"></i>
+              </div>
+              <h6 class="fw-bold">Reading</h6>
+              <p class="text-muted small mb-0">
+                Tech blogs & personal development books.
+              </p>
+            </div>
+          </div>
+
+          <!-- Hobby Card -->
+          <div class="col-6 col-md-3">
+            <div class="glass-card text-center p-4">
+              <div class="icon-wrap mb-3">
+                <i class="bi bi-lightbulb"></i>
+              </div>
+              <h6 class="fw-bold">New Tech</h6>
+              <p class="text-muted small mb-0">
+                Curious about emerging frameworks & tools.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- contact form -->
+
+    <section id="contact" class="contact-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Column: Contact Info -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="mb-3 fw-bold">Get in Touch</h2>
+            <p class="mb-4 text-muted">
+              I’d love to hear from you! Whether you have a project idea, want
+              to collaborate, or just want to say hi — feel free to reach out.
+            </p>
+
+            <ul class="list-unstyled contact-info mb-4">
+              <li><strong>📍 Address:</strong> Punjab, India</li>
+              <li><strong>📞 Phone:</strong> <a class="text-decoration-none text-black" href="tel:+918013400050">+91 80134-00050</a></li>
+              <li><strong>✉️ Email:</strong> <a class="text-decoration-none text-black" href="mailTo:itzmemoksh2002@gmail.com">itzmemoksh2002@gmail.com</a></li>
+            </ul>
+
+            <div class="social-icons d-flex gap-3">
+              <a
+                href="https://github.com/mehanmoksh/"
+                class="text-decoration-none social-link" target="_blank"
+                ><i class="bi bi-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/moksh-mehan-7280381b3/"
+                class="text-decoration-none social-link" target="_blank"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <!-- leetcode -->
+              <a href="https://leetcode.com/u/Mr_Moksh_Mehan/" target="_blank" class="social-link leetcode_icon">
+                <img src="assets/images/icons/leetcode.svg" class="leetcode_contact_icon" alt="LeetCode Logo" width="24" height="24" style="margin-bottom: 8px;" />
+              </a>
+              <!-- gfg -->
+              <!-- <a href="https://leetcode.com/yourusername" target="_blank" class="coding-icon">
+                <img src="assets/images/icons/geeksforgeeks.svg" alt="GeeksforGeeks Logo" width="24" height="24" />
+              </a> -->
+            </div>
+          </div>
+
+          <!-- Right Column: Contact Form -->
+          <div class="col-lg-6">
+            <div
+              class="contact-form p-4 shadow-sm rounded-4 bg-white"
+              id="contact-section"
+            >
+              <!-- another added form -->
+              <form id="contact-form">
+                <div class="mb-3 text-start">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+                <div class="mb-3 text-start">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+                <div class="mb-3 text-start">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="subject"
+                    name="subject"
+                    placeholder="Enter subject"
+                    required
+                  />
+                </div>
+                <div class="mb-3 text-start">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Type your message"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary px-4 py-2 rounded-pill"
+                >
+                  Send Message
+                </button>
+                <p id="form-status" class="mt-3"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer with nav links and qr section for the future mobile appilcation download & contact information  -->
+    <footer class="footer-section py-4">
+      <div class="container text-center">
+        <!-- Social Icons -->
+        <div class="mb-3 footer-social">
+          <a href="https://github.com/mehanmoksh/" target="_blank" class="me-3">
+            <i class="bi bi-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/moksh-mehan-7280381b3/"
+            target="_blank"
+            class="me-3"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="mailto:itzmemoksh2002@gmail.com" class="me-3">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+          <a href="tel:+918013400050">
+            <i class="bi bi-telephone-fill"></i>
+          </a>
+          <!-- <a href="#top" class="back-to-top small text-decoration-none">
+            ↑ Back to Top
+          </a> -->
+
+          <a href="#top" class="back-to-top-btn">
+            ↑
+          </a>
+
+        </div>
+
+        <!-- Tiny location or tagline -->
+        <p class="text-muted small mb-1">
+          Building elegant and scalable web experiences.
+        </p>
+
+        <!-- Copyright -->
+        <p class="text-muted small mb-0">
+          © 2026 Moksh Mehan — All Rights Reserved
+        </p>
+      </div>
+    </footer>
+
+    <script src="/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

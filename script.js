@@ -278,4 +278,6 @@ if (years > 0) {
   experienceText += `${months}+ Months`;
 }
 
-document.getElementById("experience").innerText = experienceText;
+document.querySelectorAll(".experience").forEach((el) => {
+  el.innerText = experienceText;
+});
